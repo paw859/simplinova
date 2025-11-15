@@ -42,7 +42,11 @@
     {{ content_for_header }}
 
     <!-- Simplinova Professional Theme -->
+    <!-- Load brand fonts: Poppins (display) + Inter (body) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
+    <!-- Midnight Professional Palette - Global Colors -->
+    <link rel="stylesheet" href="{{ 'midnight-palette.css' | asset_url }}">
 
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'

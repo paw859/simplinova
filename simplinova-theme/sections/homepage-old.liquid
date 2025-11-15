@@ -1,0 +1,1016 @@
+{% comment %}
+  SIMPLINOVA - CONVERSION-OPTIMIZED HOMEPAGE
+  Purpose: Transform visitor into buyer in 60 seconds
+  Strategy: Trust + Speed + Delight (TSD Framework)
+  
+  Sections:
+  1. Hero (3-second test)
+  2. Trust Bar (immediate credibility)
+  3. Bestsellers (social proof)
+  4. Value Proposition (differentiation)
+  5. Product Categories (guided discovery)
+  6. Testimonials (third-party validation)
+  7. Authority / Achievements
+  8. Email Capture (list building)
+  9. FAQ (handle objections)
+  10. Final CTA
+{% endcomment %}
+
+<section class="homepage-hero">
+  <div class="hero-content">
+    <div class="hero-badge">✨ Welcome to Simplinova</div>
+    <h1 class="hero-title">Simple Living, Innovative Solutions</h1>
+    <p class="hero-subtitle">Curated home & lifestyle products that make life easier. Premium quality, unbeatable prices, and hassle-free service.</p>
+    
+    <div class="hero-ctas">
+      <a href="/collections/all" class="btn btn-primary">Shop Now</a>
+      <a href="#our-story" class="btn btn-secondary">Learn Our Story</a>
+    </div>
+
+    <div class="hero-trust-hints">
+      <span>🚚 Free Shipping Over $50</span>
+      <span>✓ 30-Day Easy Returns</span>
+      <span>🔒 Secure Checkout</span>
+    </div>
+  </div>
+</section>
+
+{%comment%} SECTION 2: TRUST BAR {%endcomment%}
+<section class="trust-bar">
+  <div class="trust-bar-wrapper">
+    <div class="trust-item">
+      <div class="trust-icon">🚚</div>
+      <h3>Free Shipping</h3>
+      <p>On orders over $50</p>
+    </div>
+
+    <div class="trust-item">
+      <div class="trust-icon">🔒</div>
+      <h3>Secure Checkout</h3>
+      <p>256-bit SSL encrypted</p>
+    </div>
+
+    <div class="trust-item">
+      <div class="trust-icon">↩️</div>
+      <h3>Easy Returns</h3>
+      <p>30-day money-back guarantee</p>
+    </div>
+
+    <div class="trust-item">
+      <div class="trust-icon">💬</div>
+      <h3>24/7 Support</h3>
+      <p>Chat, email, or phone</p>
+    </div>
+  </div>
+</section>
+
+{%comment%} SECTION 3: BESTSELLERS (SOCIAL PROOF) {%endcomment%}
+<section class="bestsellers">
+  <div class="section-header">
+    <h2>Our Bestsellers</h2>
+    <p>Join thousands of happy customers who love these products</p>
+  </div>
+
+  <div class="products-grid">
+    {%- for i in (1..8) -%}
+      <div class="product-card bestseller-card">
+        <div class="product-image-wrapper">
+          <div class="product-placeholder-image">Product Image</div>
+          <span class="bestseller-badge">⭐ Bestseller</span>
+          <div class="quick-view-overlay">
+            <button class="btn btn-small">Quick View</button>
+          </div>
+        </div>
+
+        <div class="product-card-content">
+          <h3 class="product-name">Premium Product {{ i }}</h3>
+          
+          <div class="product-rating">
+            <span class="stars">★★★★★</span>
+            <span class="review-count">(284 reviews)</span>
+          </div>
+
+          <div class="product-price-wrapper">
+            <span class="price">${{ i | times: 25 | plus: 29 }}.99</span>
+            <span class="original-price">${{ i | times: 28 | plus: 39 }}.99</span>
+          </div>
+
+          <button class="btn btn-primary btn-full">Add to Cart</button>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+
+  <div class="section-footer">
+    <a href="/collections/bestsellers" class="link-button">View All Bestsellers →</a>
+  </div>
+</section>
+
+{%comment%} SECTION 4: VALUE PROPOSITION {%endcomment%}
+<section class="value-proposition" id="our-story">
+  <div class="vp-wrapper">
+    <div class="vp-content">
+      <h2>Why Choose Simplinova?</h2>
+      <p>We believe that great living shouldn't be complicated. That's why Simplinova exists: to curate the best home and lifestyle products, remove the clutter, and bring innovation into your everyday life.</p>
+
+      <ul class="vp-pillars">
+        <li>
+          <strong>🎯 Expert Curation</strong> - Every product is hand-selected for quality, design, and value
+        </li>
+        <li>
+          <strong>💎 Premium Quality</strong> - We partner with trusted manufacturers to ensure durability
+        </li>
+        <li>
+          <strong>🚀 Innovation First</strong> - We stay ahead of trends to bring you the latest innovations
+        </li>
+        <li>
+          <strong>❤️ Customer-First Service</strong> - Your satisfaction is our #1 priority
+        </li>
+      </ul>
+    </div>
+
+    <div class="vp-image">
+      <div class="placeholder-visual">Brand Story Visual</div>
+    </div>
+  </div>
+</section>
+
+{%comment%} SECTION 5: PRODUCT CATEGORIES {%endcomment%}
+<section class="product-categories">
+  <h2>Explore by Category</h2>
+
+  <div class="categories-grid">
+    <a href="/collections/home-essentials" class="category-card">
+      <div class="category-image">🏠</div>
+      <h3>Home Essentials</h3>
+      <p>24 Products</p>
+    </a>
+
+    <a href="/collections/tech-gadgets" class="category-card">
+      <div class="category-image">⚡</div>
+      <h3>Tech & Gadgets</h3>
+      <p>18 Products</p>
+    </a>
+
+    <a href="/collections/kitchen" class="category-card">
+      <div class="category-image">🍳</div>
+      <h3>Kitchen</h3>
+      <p>22 Products</p>
+    </a>
+
+    <a href="/collections/outdoor" class="category-card">
+      <div class="category-image">🌿</div>
+      <h3>Outdoor Living</h3>
+      <p>16 Products</p>
+    </a>
+
+    <a href="/collections/wellness" class="category-card">
+      <div class="category-image">🧘</div>
+      <h3>Wellness</h3>
+      <p>12 Products</p>
+    </a>
+
+    <a href="/collections/new-arrivals" class="category-card">
+      <div class="category-image">✨</div>
+      <h3>New Arrivals</h3>
+      <p>Weekly Updates</p>
+    </a>
+  </div>
+</section>
+
+{%comment%} SECTION 6: SOCIAL PROOF (TESTIMONIALS) {%endcomment%}
+<section class="testimonials">
+  <h2>What Our Customers Say</h2>
+  <p class="section-subtitle">Join 15,000+ happy customers</p>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <blockquote>"Fast shipping and exactly as described. The quality exceeded my expectations. Will definitely order again!"</blockquote>
+      <div class="testimonial-author">
+        <div class="author-avatar">SK</div>
+        <div>
+          <p class="author-name">Sarah Kim</p>
+          <p class="author-title">Verified Buyer</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <blockquote>"Great quality for the price. I've bought from Simplinova three times now and haven't been disappointed once."</blockquote>
+      <div class="testimonial-author">
+        <div class="author-avatar">MJ</div>
+        <div>
+          <p class="author-name">Michael Johnson</p>
+          <p class="author-title">Verified Buyer</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <blockquote>"Customer service was amazing when I had a question. They responded within an hour. Highly recommend!"</blockquote>
+      <div class="testimonial-author">
+        <div class="author-avatar">JL</div>
+        <div>
+          <p class="author-name">Jennifer Lee</p>
+          <p class="author-title">Verified Buyer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%comment%} SECTION 7: AUTHORITY / ACHIEVEMENTS {%endcomment%}
+<section class="achievements">
+  <div class="achievement-item">
+    <h3>15,000+</h3>
+    <p>Happy Customers</p>
+  </div>
+
+  <div class="achievement-item">
+    <h3>4.8★</h3>
+    <p>Average Rating</p>
+  </div>
+
+  <div class="achievement-item">
+    <h3>48hr</h3>
+    <p>Avg. Delivery</p>
+  </div>
+
+  <div class="achievement-item">
+    <h3>100%</h3>
+    <p>Satisfaction</p>
+  </div>
+</section>
+
+{%comment%} SECTION 8: EMAIL CAPTURE {%endcomment%}
+<section class="email-capture">
+  <div class="email-capture-content">
+    <h2>Join Our Community</h2>
+    <p>Get 10% off your first order + exclusive deals, new arrivals, and insider tips.</p>
+
+    <form class="email-form">
+      <input 
+        type="email" 
+        placeholder="Enter your email" 
+        required 
+        aria-label="Email address"
+      >
+      <button type="submit" class="btn btn-primary">Get My 10% Off</button>
+    </form>
+
+    <p class="privacy-note">We respect your inbox. Unsubscribe anytime.</p>
+  </div>
+</section>
+
+{%comment%} SECTION 9: FAQ / OBJECTION HANDLING {%endcomment%}
+<section class="faq">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-grid">
+    <div class="faq-item">
+      <h3>How fast is shipping?</h3>
+      <p>Most orders ship within 24 hours and arrive within 2-5 business days. We offer free shipping on orders over $50.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What's your return policy?</h3>
+      <p>We offer a 30-day money-back guarantee. If you're not satisfied for any reason, we'll refund or exchange it.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is my payment secure?</h3>
+      <p>Yes! We use 256-bit SSL encryption and never store credit card data. All payments are processed through secure payment gateways.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do you have customer support?</h3>
+      <p>Absolutely! Chat with us, email hello@simplinova.com, or call 1-800-SIMPLINOVA. We're here Mon-Fri, 9am-6pm EST.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Are your products original?</h3>
+      <p>Yes! Every product is authentic and comes directly from authorized manufacturers. We guarantee 100% authenticity.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do you offer bulk discounts?</h3>
+      <p>For orders of 10+ items, we offer special pricing. Contact our sales team at bulk@simplinova.com for details.</p>
+    </div>
+  </div>
+</section>
+
+{%comment%} SECTION 10: FINAL CTA {%endcomment%}
+<section class="final-cta">
+  <h2>Ready to Simplify Your Life?</h2>
+  <p>Start shopping our curated collection and discover products that make a difference.</p>
+  <a href="/collections/all" class="btn btn-primary btn-large">Start Shopping</a>
+</section>
+
+<style>
+  {%comment%} HOMEPAGE HERO {%endcomment%}
+  .homepage-hero {
+    background: linear-gradient(135deg, #1E3A4C 0%, #3D5A6B 100%);
+    color: white;
+    padding: 6rem 2rem;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    color: #A8E6CF;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .hero-title {
+    font-size: clamp(32px, 7vw, 56px);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+    font-family: var(--font-display);
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2rem;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .hero-trust-hints {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: rgba(241, 245, 249, 0.9);
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  @media (max-width: 768px) {
+    .homepage-hero {
+      padding: 4rem 1.5rem;
+      min-height: 450px;
+    }
+
+    .hero-ctas {
+      flex-direction: column;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  {%comment%} TRUST BAR {%endcomment%}
+  .trust-bar {
+    background: #F3F4F6;
+    padding: 3rem 2rem;
+    border-top: 1px solid #E5E7EB;
+    border-bottom: 1px solid #E5E7EB;
+  }
+
+  .trust-bar-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  .trust-item {
+    text-align: center;
+  }
+
+  .trust-icon {
+    font-size: 32px;
+    margin-bottom: 0.5rem;
+  }
+
+  .trust-item h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 0.25rem;
+  }
+
+  .trust-item p {
+    font-size: 13px;
+    color: #6B7280;
+  }
+
+  {%comment%} BESTSELLERS {%endcomment%}
+  .bestsellers {
+    padding: 4rem 2rem;
+    background: #FAFBFC;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-header h2 {
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-display);
+  }
+
+  .section-header p {
+    font-size: 16px;
+    color: #6B7280;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+  }
+
+  .bestseller-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E5E7EB;
+  }
+
+  .bestseller-card:hover {
+    box-shadow: 0 10px 25px rgba(61, 90, 107, 0.1);
+    transform: translateY(-8px);
+  }
+
+  .product-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #E5E7EB 0%, #F3F4F6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-placeholder-image {
+    color: #6B7280;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .bestseller-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #FF6B6B;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .quick-view-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .bestseller-card:hover .quick-view-overlay {
+    opacity: 1;
+  }
+
+  .product-card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 0.5rem;
+  }
+
+  .product-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 13px;
+  }
+
+  .stars {
+    color: #FFA500;
+    font-size: 14px;
+  }
+
+  .review-count {
+    color: #6B7280;
+  }
+
+  .product-price-wrapper {
+    margin-bottom: 1rem;
+    flex-grow: 1;
+  }
+
+  .price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #FF6B6B;
+  }
+
+  .original-price {
+    font-size: 14px;
+    color: #6B7280;
+    text-decoration: line-through;
+    margin-left: 0.5rem;
+  }
+
+  .section-footer {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .link-button {
+    color: #FF6B6B;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  .link-button:hover {
+    color: #E54545;
+  }
+
+  {%comment%} VALUE PROPOSITION {%endcomment%}
+  .value-proposition {
+    padding: 4rem 2rem;
+    background: #F3F4F6;
+    border-top: 1px solid #E5E7EB;
+    border-bottom: 1px solid #E5E7EB;
+  }
+
+  .vp-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .vp-content h2 {
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-display);
+  }
+
+  .vp-content p {
+    font-size: 16px;
+    color: #6B7280;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .vp-pillars {
+    list-style: none;
+    padding: 0;
+  }
+
+  .vp-pillars li {
+    margin-bottom: 1.25rem;
+    padding-left: 0;
+    font-size: 15px;
+    color: #1F2937;
+    line-height: 1.6;
+  }
+
+  .vp-pillars strong {
+    display: block;
+    color: #FF6B6B;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .placeholder-visual {
+    width: 100%;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #E5E7EB 0%, #F3F4F6 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6B7280;
+    font-size: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .vp-wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  {%comment%} PRODUCT CATEGORIES {%endcomment%}
+  .product-categories {
+    padding: 4rem 2rem;
+    background: #FAFBFC;
+  }
+
+  .product-categories h2 {
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 700;
+    text-align: center;
+    color: #1F2937;
+    margin-bottom: 3rem;
+    font-family: var(--font-display);
+  }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .category-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 1px solid #E5E7EB;
+  }
+
+  .category-card:hover {
+    box-shadow: 0 8px 20px rgba(61, 90, 107, 0.08);
+    transform: translateY(-4px);
+    border-color: #FF6B6B;
+  }
+
+  .category-image {
+    font-size: 48px;
+    margin-bottom: 1rem;
+  }
+
+  .category-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 0.5rem;
+  }
+
+  .category-card p {
+    font-size: 13px;
+    color: #6B7280;
+  }
+
+  {%comment%} TESTIMONIALS {%endcomment%}
+  .testimonials {
+    padding: 4rem 2rem;
+    background: #F3F4F6;
+    border-top: 1px solid #E5E7EB;
+    border-bottom: 1px solid #E5E7EB;
+  }
+
+  .testimonials h2 {
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 700;
+    text-align: center;
+    color: #1F2937;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-display);
+  }
+
+  .section-subtitle {
+    text-align: center;
+    color: #6B7280;
+    margin-bottom: 2rem;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .testimonial-card {
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .testimonial-card:hover {
+    border-color: #FF6B6B;
+    box-shadow: 0 8px 20px rgba(61, 90, 107, 0.08);
+  }
+
+  .testimonial-stars {
+    color: #FFA500;
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-card blockquote {
+    font-size: 15px;
+    color: #1F2937;
+    line-height: 1.7;
+    margin: 1rem 0;
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #E5E7EB;
+  }
+
+  .author-avatar {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8888 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .author-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1F2937;
+    margin: 0;
+  }
+
+  .author-title {
+    font-size: 12px;
+    color: #6B7280;
+    margin: 0;
+  }
+
+  {%comment%} ACHIEVEMENTS {%endcomment%}
+  .achievements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    padding: 3rem 2rem;
+    background: #FAFBFC;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .achievement-item h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #FF6B6B;
+    margin-bottom: 0.5rem;
+  }
+
+  .achievement-item p {
+    font-size: 14px;
+    color: #6B7280;
+  }
+
+  {%comment%} EMAIL CAPTURE {%endcomment%}
+  .email-capture {
+    background: linear-gradient(135deg, #1E3A4C 0%, #3D5A6B 100%);
+    color: white;
+    padding: 4rem 2rem;
+  }
+
+  .email-capture-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .email-capture h2 {
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-display);
+  }
+
+  .email-capture > p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2rem;
+  }
+
+  .email-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .email-form input {
+    padding: 12px 16px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 16px;
+    font-family: var(--font-body);
+  }
+
+  .email-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .privacy-note {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  @media (max-width: 768px) {
+    .email-form {
+      flex-direction: column;
+    }
+
+    .email-form button {
+      width: 100%;
+    }
+  }
+
+  {%comment%} FAQ {%endcomment%}
+  .faq {
+    padding: 4rem 2rem;
+    background: #F3F4F6;
+    border-top: 1px solid #E5E7EB;
+    border-bottom: 1px solid #E5E7EB;
+  }
+
+  .faq h2 {
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 700;
+    text-align: center;
+    color: #1F2937;
+    margin-bottom: 3rem;
+    font-family: var(--font-display);
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .faq-item h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #FF6B6B;
+    margin-bottom: 0.75rem;
+  }
+
+  .faq-item p {
+    font-size: 14px;
+    color: #1F2937;
+    line-height: 1.6;
+  }
+
+  {%comment%} FINAL CTA {%endcomment%}
+  .final-cta {
+    background: #FAFBFC;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .final-cta h2 {
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 1rem;
+    font-family: var(--font-display);
+  }
+
+  .final-cta p {
+    font-size: 16px;
+    color: #6B7280;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  {%comment%} BUTTON UTILITIES {%endcomment%}
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .btn-primary {
+    background: #FF6B6B;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: #E54545;
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.25);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+
+  .btn-secondary:hover {
+    background: white;
+    color: #1E3A4C;
+  }
+
+  .btn-full {
+    width: 100%;
+  }
+
+  .btn-small {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .btn-large {
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+</style>

@@ -18,9 +18,9 @@
 
 <style>
   .newsletter-cta {
-    background: linear-gradient(135deg, var(--color-ocean-deep) 0%, var(--color-teal-logo) 100%);
+    background: var(--gradient-hero);
     color: var(--color-white);
-    padding: var(--space-3xl) var(--space-md);
+    padding: var(--spacing-3xl) var(--spacing-lg);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -55,11 +55,11 @@
 
   .newsletter-form {
     display: flex;
-    gap: var(--space-sm);
+    gap: var(--spacing-sm);
     background: rgba(255, 255, 255, 0.95);
     padding: 6px;
-    border-radius: var(--radius-lg);
-    max-width: 500px;
+    border-radius: 12px;
+    max-width: 540px;
     margin: 0 auto;
   }
 
@@ -82,19 +82,20 @@
   }
 
   .newsletter-form button {
-    background: var(--color-coral);
-    color: white;
+    background: var(--color-accent);
+    color: var(--color-white);
     border: none;
-    border-radius: var(--radius-md);
-    padding: var(--space-sm) var(--space-lg);
-    font-weight: 600;
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-weight: 700;
     cursor: pointer;
     white-space: nowrap;
-    transition: all var(--transition-base);
+    transition: all 0.18s ease;
   }
 
   .newsletter-form button:hover {
-    background: var(--color-coral-dark);
+    background: var(--color-accent-dark);
+    transform: translateY(-2px);
   }
 
   @media (max-width: 768px) {

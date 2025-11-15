@@ -1,26 +1,11 @@
 {
   "sections": {
-    "hero": {
-      "type": "hero",
-      "settings": {}
-    },
-    "featured_products": {
-      "type": "featured-products",
-      "settings": {}
-    },
-    "trust_features": {
-      "type": "trust-features",
-      "settings": {}
-    },
-    "newsletter": {
-      "type": "newsletter-cta",
+    "homepage": {
+      "type": "homepage",
       "settings": {}
     }
   },
   "order": [
-    "hero",
-    "featured_products",
-    "trust_features",
-    "newsletter"
+    "homepage"
   ]
 }

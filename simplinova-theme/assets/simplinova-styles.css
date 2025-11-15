@@ -8,30 +8,30 @@
    ========================================== */
 
 :root {
-  /* Primary Colors */
-  --color-primary: #1E40AF;
-  --color-primary-dark: #1E3A8A;
-  --color-primary-light: #3B82F6;
-  --color-primary-lighter: #60A5FA;
-  --color-accent: #F97316;
-  --color-accent-light: #FB923C;
-  --color-accent-dark: #EA580C;
-  --color-accent-darker: #DC2626;
+  /* Dark Palette - Midnight Professional */
+  --color-logo-teal: #5A8CA3; /* lightened logo teal for dark backgrounds */
+  --color-deep-navy: #0F172A; /* main deep background */
+  --color-slate: #1E293B; /* cards, elevated surfaces, header/footer */
+  --color-border: #334155; /* subtle dividers */
+  --color-accent: #22D3EE; /* Accent Cyan for CTAs */
+  --color-warm-coral: #FB7185; /* Warm Coral for badges */
+  --color-logo-teal-light: #5A8CA3;
   
   /* Neutrals */
   --color-white: #FFFFFF;
-  --color-light-gray: #F3F4F6;
-  --color-gray: #E5E7EB;
-  --color-medium-gray: #6B7280;
-  --color-dark-gray: #374151;
-  --color-charcoal: #1F2937;
+  --color-page-bg: var(--color-deep-navy); /* body background */
+  --color-light-gray: #0F172A; /* not used as light in dark theme */
+  --color-gray: #1F2937;
+  --color-medium-gray: #94A3B8; /* muted secondary text */
+  --color-dark-gray: #64748B; /* tertiary labels/captions */
+  --color-charcoal: #F1F5F9; /* primary text (near-white) */
   
   /* Gradients */
-  --gradient-hero: linear-gradient(135deg, #1E40AF 0%, #0891B2 100%);
-  --gradient-accent: linear-gradient(135deg, #F97316 0%, #FB923C 100%);
-  --gradient-subtle: linear-gradient(180deg, #F3F4F6 0%, #FFFFFF 100%);
-  --gradient-new: linear-gradient(135deg, #F97316 0%, #FB923C 100%);
-  --gradient-home: linear-gradient(135deg, #1E40AF 0%, #0891B2 100%);
+  --gradient-hero: linear-gradient(135deg, var(--color-deep-ocean) 0%, var(--color-primary) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+  --gradient-subtle: linear-gradient(180deg, #F7F7F7 0%, #FFFFFF 100%);
+  --gradient-new: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+  --gradient-home: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
   --gradient-tech: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%);
   
   /* Typography */
@@ -79,7 +79,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: var(--color-charcoal);
-  background: var(--color-white);
+  background: var(--color-page-bg);
 }
 
 a {
@@ -112,13 +112,13 @@ img {
    ========================================== */
 
 .header {
-  background: var(--color-white);
-  border-bottom: 1px solid var(--color-gray);
+  background: var(--color-slate);
+  border-bottom: 1px solid var(--color-border);
   padding: var(--spacing-md) var(--spacing-lg);
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 6px 18px rgba(2,6,23,0.6);
 }
 
 .header-wrapper {
@@ -132,7 +132,7 @@ img {
 .header-logo {
   font-size: 28px;
   font-weight: 800;
-  color: var(--color-primary);
+  color: var(--color-charcoal);
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: var(--font-display);
@@ -148,6 +148,29 @@ img {
   margin-left: 8px;
   color: var(--color-accent);
   font-weight: bold;
+}
+
+/* Brand logo wrapper to match simplinova circular mark */
+.header__heading-logo-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--color-white);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+}
+
+.header__heading-logo-wrapper svg {
+  width: 56px;
+  height: 56px;
+  display: block;
+}
+
+.header__heading-logo {
+  display: block;
 }
 
 .header-nav {
@@ -215,30 +238,30 @@ img {
   font-weight: bold;
 }
 
-.announcement-bar {
-  background: var(--color-primary);
-  color: var(--color-white);
-  padding: var(--spacing-sm) 0;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 500;
-}
+  .announcement-bar {
+    background: var(--color-logo-teal-light);
+    color: var(--color-page-bg);
+    padding: var(--spacing-sm) 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+  }
 
 /* ==========================================
    4. HERO SECTION
    ========================================== */
 
 .hero {
-  background: var(--gradient-hero);
+  background: linear-gradient(135deg, var(--color-deep-navy) 0%, var(--color-logo-teal-light) 100%);
   position: relative;
   overflow: hidden;
-  padding: 120px var(--spacing-lg);
-  min-height: 600px;
+  padding: 100px var(--spacing-lg);
+  min-height: 560px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--color-white);
+  color: var(--color-charcoal);
 }
 
 /* Floating circle decoration */
@@ -298,26 +321,29 @@ img {
   flex-wrap: wrap;
 }
 
+
 .btn-primary {
   background: var(--color-accent);
-  color: var(--color-white);
+  color: var(--color-charcoal);
   padding: var(--spacing-md) var(--spacing-2xl);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 22px rgba(34,211,238,0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .btn-primary:hover {
-  background: var(--color-accent-dark);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  background: rgba(34,211,238,0.95);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(34,211,238,0.18);
 }
+
 
 .btn-secondary {
   background: transparent;
   color: var(--color-white);
-  border: 2px solid var(--color-white);
+  border: 2px solid rgba(255,255,255,0.18);
   padding: calc(var(--spacing-md) - 2px) calc(var(--spacing-2xl) - 2px);
   font-size: 16px;
   font-weight: 600;
@@ -325,7 +351,7 @@ img {
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
   transform: translateY(-2px);
 }
 
@@ -343,7 +369,7 @@ img {
    ========================================== */
 
 .trust-badges {
-  background: var(--color-light-gray);
+  background: linear-gradient(180deg, rgba(250,250,250,1) 0%, rgba(245,247,246,1) 100%);
   padding: var(--spacing-3xl) var(--spacing-lg);
 }
 
@@ -365,13 +391,13 @@ img {
 .trust-badge-icon {
   width: 60px;
   height: 60px;
-  background: var(--color-primary);
+  background: var(--color-accent);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: var(--spacing-md);
-  color: var(--color-white);
+  color: var(--color-deep-navy);
 }
 
 .trust-badge-icon svg {
@@ -444,15 +470,15 @@ img {
 }
 
 .product-card {
-  background: var(--color-white);
+  background: var(--color-slate);
   border-radius: var(--border-radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 6px 18px rgba(2,6,23,0.6);
   transition: all 0.3s ease;
 }
 
 .product-card:hover {
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 18px 40px rgba(34,211,238,0.06);
   transform: translateY(-8px);
 }
 
@@ -508,7 +534,7 @@ img {
 .product-price {
   font-size: 24px;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-accent);
   margin-bottom: var(--spacing-md);
 }
 
@@ -885,8 +911,8 @@ img {
    ========================================== */
 
 .footer {
-  background: var(--color-charcoal);
-  color: #9CA3AF;
+  background: linear-gradient(180deg, var(--color-deep-ocean), rgba(30,58,76,0.9));
+  color: rgba(255,255,255,0.92);
   padding: var(--spacing-3xl) var(--spacing-lg);
 }
 
