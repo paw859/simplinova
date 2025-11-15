@@ -1,0 +1,105 @@
+{% comment %}
+  Hero Section - Bold, Minimal, Conversion-Focused
+{% endcomment %}
+
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-badge">✨ New Arrivals</div>
+    <h1 class="hero-title">Premium Quality, Unbeatable Prices</h1>
+    <p class="hero-subtitle">Curated products shipped directly to you. Fast delivery. No hassle returns.</p>
+    
+    <div class="hero-ctas">
+      <button class="btn btn-primary btn-lg">Shop Now</button>
+      <button class="btn btn-secondary btn-lg">Explore Collections</button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, #FAFBFC 0%, #F3F4F6 100%);
+    border-bottom: 1px solid var(--color-border-light);
+    padding: var(--space-4xl) var(--space-md);
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(61, 90, 107, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero-container {
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255, 107, 107, 0.1);
+    color: var(--color-coral);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--space-lg);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+  }
+
+  .hero-title {
+    font-size: clamp(36px, 7vw, 56px);
+    margin-bottom: var(--space-md);
+    color: var(--color-ocean-deep);
+    line-height: 1.15;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(16px, 3vw, 20px);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-2xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-ctas .btn {
+    min-width: 160px;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: var(--space-2xl) var(--space-md);
+      min-height: 500px;
+    }
+
+    .hero-ctas {
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .hero-ctas .btn {
+      width: 100%;
+      min-width: unset;
+    }
+  }
+</style>

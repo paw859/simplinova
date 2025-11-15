@@ -1,0 +1,120 @@
+{% comment %}
+  Trust & Features Section - Build Confidence
+{% endcomment %}
+
+<section class="trust-features">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="1" y="3" width="15" height="13"></rect>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+          </svg>
+        </div>
+        <h5>Fast Shipping</h5>
+        <p>Free shipping on orders over $50. Express options available.</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <polyline points="23 4 23 10 17 10"></polyline>
+            <polyline points="1 20 1 14 7 14"></polyline>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36M20.49 15a9 9 0 0 1-14.85 3.36"></path>
+          </svg>
+        </div>
+        <h5>Easy Returns</h5>
+        <p>30-day hassle-free returns. Full refunds guaranteed.</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <h5>Secure Checkout</h5>
+        <p>256-bit SSL encryption. All payments secure.</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </div>
+        <h5>24/7 Support</h5>
+        <p>Expert support team always ready to help.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .trust-features {
+    background: var(--color-bg-secondary);
+    padding: var(--space-3xl) var(--space-md);
+    border-top: 1px solid var(--color-border-light);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-xl);
+  }
+
+  .feature-item {
+    text-align: center;
+  }
+
+  .feature-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--color-mint);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-md);
+    color: var(--color-ocean-deep);
+    stroke-width: 2;
+  }
+
+  .feature-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .feature-item h5 {
+    color: var(--color-ocean-deep);
+    margin-bottom: var(--space-xs);
+  }
+
+  .feature-item p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .trust-features {
+      padding: var(--space-2xl) var(--space-md);
+    }
+
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-lg);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

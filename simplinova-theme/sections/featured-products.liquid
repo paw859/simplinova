@@ -1,0 +1,191 @@
+{% comment %}
+  Featured Products - Clean Grid with Hover Effects
+{% endcomment %}
+
+<section class="featured-products">
+  <div class="container">
+    <div class="section-header">
+      <h2>Trending Now</h2>
+      <p>Best-selling items from our collection</p>
+    </div>
+
+    <div class="products-grid">
+      {% for i in (1..8) %}
+        <div class="product-card">
+          <div class="product-image">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+              <circle cx="12" cy="13" r="4"></circle>
+            </svg>
+            {% if i == 1 or i == 5 %}
+              <span class="product-badge">Popular</span>
+            {% elsif i == 3 %}
+              <span class="product-badge sale">Sale</span>
+            {% endif %}
+          </div>
+
+          <div class="product-content">
+            <h5 class="product-name">Premium Product</h5>
+            
+            <div class="product-rating">
+              {% for star in (1..5) %}
+                <span class="star">★</span>
+              {% endfor %}
+              <span class="rating-count">(48)</span>
+            </div>
+
+            <div class="product-pricing">
+              {% if i == 3 %}
+                <span class="price-original">${{ i | times: 35 | plus: 99 }}</span>
+              {% endif %}
+              <span class="price">${{ i | times: 28 | plus: 45 }}.99</span>
+            </div>
+
+            <button class="btn btn-primary btn-sm" style="width: 100%;">Add to Cart</button>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .featured-products {
+    background: var(--color-white);
+    padding: var(--space-3xl) var(--space-md);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .section-header h2 {
+    color: var(--color-ocean-deep);
+    margin-bottom: var(--space-sm);
+  }
+
+  .section-header p {
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .product-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-base);
+  }
+
+  .product-card:hover {
+    border-color: var(--color-border-medium);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+  }
+
+  .product-image {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #F3F4F6 0%, #E8EAED 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #9CA3AF;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .product-image svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .product-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--color-coral);
+    color: white;
+    padding: 4px 8px;
+    border-radius: var(--radius-xs);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .product-badge.sale {
+    background: var(--color-error);
+  }
+
+  .product-content {
+    padding: var(--space-md);
+  }
+
+  .product-name {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+    color: var(--color-text-primary);
+    line-height: 1.4;
+  }
+
+  .product-rating {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: var(--space-sm);
+    font-size: 13px;
+  }
+
+  .star {
+    color: #FFB81C;
+  }
+
+  .rating-count {
+    color: var(--color-text-tertiary);
+    font-size: 12px;
+    margin-left: auto;
+  }
+
+  .product-pricing {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-md);
+  }
+
+  .price-original {
+    text-decoration: line-through;
+    color: var(--color-text-tertiary);
+    font-size: 13px;
+  }
+
+  .price {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-ocean-deep);
+  }
+
+  @media (max-width: 768px) {
+    .featured-products {
+      padding: var(--space-2xl) var(--space-md);
+    }
+
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-md);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .products-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

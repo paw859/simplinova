@@ -1,26 +1,26 @@
 {
   "sections": {
     "hero": {
-      "type": "dropshipping-hero",
+      "type": "hero",
       "settings": {}
     },
     "featured_products": {
-      "type": "dropshipping-products",
+      "type": "featured-products",
       "settings": {}
     },
-    "trust_badges": {
-      "type": "dropshipping-trust",
+    "trust_features": {
+      "type": "trust-features",
       "settings": {}
     },
-    "cta": {
-      "type": "dropshipping-cta",
+    "newsletter": {
+      "type": "newsletter-cta",
       "settings": {}
     }
   },
   "order": [
     "hero",
     "featured_products",
-    "trust_badges",
-    "cta"
+    "trust_features",
+    "newsletter"
   ]
 }
