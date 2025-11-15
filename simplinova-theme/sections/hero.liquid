@@ -9,8 +9,8 @@
     <p class="hero-subtitle">Curated products shipped directly to you. Fast delivery. No hassle returns.</p>
     
     <div class="hero-ctas">
-      <button class="btn btn-primary btn-lg">Shop Now</button>
-      <button class="btn btn-secondary btn-lg">Explore Collections</button>
+      <a href="/collections/all" class="btn btn-primary btn-lg">Shop Now</a>
+      <a href="/collections" class="btn btn-secondary btn-lg">Explore Collections</a>
     </div>
   </div>
 </section>
@@ -84,6 +84,11 @@
 
   .hero-ctas .btn {
     min-width: 160px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
   }
 
   @media (max-width: 768px) {

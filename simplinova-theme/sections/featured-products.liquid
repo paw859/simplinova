@@ -41,7 +41,7 @@
               <span class="price">${{ i | times: 28 | plus: 45 }}.99</span>
             </div>
 
-            <button class="btn btn-primary btn-sm" style="width: 100%;">Add to Cart</button>
+            <button class="btn btn-primary" style="width: 100%; padding: var(--space-sm) var(--space-md); font-size: 14px; margin-top: var(--space-md);">Add to Cart</button>
           </div>
         </div>
       {% endfor %}
@@ -125,6 +125,9 @@
 
   .product-content {
     padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 
   .product-name {
@@ -133,6 +136,10 @@
     margin-bottom: var(--space-xs);
     color: var(--color-text-primary);
     line-height: 1.4;
+    text-align: left;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
   }
 
   .product-rating {
@@ -141,6 +148,7 @@
     gap: 2px;
     margin-bottom: var(--space-sm);
     font-size: 13px;
+    justify-content: flex-start;
   }
 
   .star {
@@ -158,6 +166,7 @@
     align-items: center;
     gap: var(--space-xs);
     margin-bottom: var(--space-md);
+    margin-top: auto;
   }
 
   .price-original {

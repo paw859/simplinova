@@ -168,7 +168,8 @@ a:hover {
 button,
 .btn,
 input[type="button"],
-input[type="submit"] {
+input[type="submit"],
+a.btn {
   font-family: var(--font-family);
   font-size: 15px;
   font-weight: 600;
@@ -182,35 +183,41 @@ input[type="submit"] {
   gap: var(--space-xs);
   white-space: nowrap;
   text-align: center;
+  text-decoration: none;
 }
 
 /* Primary Button - Coral */
 .btn-primary,
-button[type="submit"] {
+button[type="submit"],
+a.btn-primary {
   background: var(--color-coral);
   color: var(--color-white);
   box-shadow: 0 2px 6px rgba(255, 107, 107, 0.25);
 }
 
 .btn-primary:hover,
-button[type="submit"]:hover {
+button[type="submit"]:hover,
+a.btn-primary:hover {
   background: var(--color-coral-dark);
   box-shadow: 0 4px 12px rgba(255, 107, 107, 0.35);
   transform: translateY(-2px);
 }
 
-.btn-primary:active {
+.btn-primary:active,
+a.btn-primary:active {
   transform: translateY(0);
 }
 
 /* Secondary Button */
-.btn-secondary {
+.btn-secondary,
+a.btn-secondary {
   background: var(--color-bg-secondary);
   color: var(--color-text-primary);
   border: 1px solid var(--color-border-light);
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+a.btn-secondary:hover {
   background: var(--color-bg-tertiary);
   border-color: var(--color-border-medium);
   transform: translateY(-2px);
