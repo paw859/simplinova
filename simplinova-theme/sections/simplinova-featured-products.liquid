@@ -5,43 +5,44 @@
 
 <section class="featured-products">
   <div class="section-header">
-    <h2 class="section-title">Our Bestsellers</h2>
-    <p class="section-subtitle">Handpicked favorites loved by thousands</p>
+    <h2 class="section-title">Featured Collection</h2>
+    <p class="section-subtitle">Curated essentials backed by our community</p>
   </div>
 
   <div class="products-grid">
     {% for i in (1..4) %}
       <div class="product-card">
-        <div class="product-image-placeholder">
-          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #9CA3AF;">
+        <div class="product-image-placeholder product-image-{{ i }}">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: rgba(255, 255, 255, 0.6);">
             <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
             <circle cx="12" cy="13" r="4"></circle>
           </svg>
-          <span class="product-image-text">Product Image</span>
+          <span class="product-image-text">Product</span>
           {% if i == 1 %}
-            <span class="product-badge">Bestseller</span>
+            <span class="product-badge badge-bestseller">Bestseller</span>
           {% elsif i == 2 %}
-            <span class="product-badge">New</span>
+            <span class="product-badge badge-new">New</span>
           {% elsif i == 3 %}
-            <span class="product-badge">Sale</span>
+            <span class="product-badge badge-sale">Sale</span>
           {% endif %}
         </div>
         
-          <div class="product-info">
-          <h3 class="product-title">Premium Product {% increment product_count %}</h3>
+        <div class="product-info">
+          <h3 class="product-title">Premium Essentials</h3>
           
           <div class="product-rating">
             <span class="star-icon">★</span>
             <span class="star-icon">★</span>
             <span class="star-icon">★</span>
             <span class="star-icon">★</span>
-            <span class="star-icon" style="opacity: 0.3;">★</span>
-            <span style="color: #6B7280; font-size: 14px; font-weight: 600;">(127 reviews)</span>
+            <span class="star-icon" style="opacity: 0.5;">★</span>
+            <span style="color: #7A7A7A; font-size: 13px; font-weight: 600;">(48 reviews)</span>
           </div>
           
-          <div class="product-price">${{ i | times: 29 | plus: 99 }}.99</div>
+          <div class="product-price">${{ i | times: 35 | plus: 79 }}.00</div>
           
           <button class="product-btn">Add to Cart</button>
+          <p class="product-detail">Free shipping on all orders</p>
         </div>
       </div>
     {% endfor %}
@@ -50,30 +51,31 @@
 
 <style>
   .featured-products {
-    padding: 3rem 1rem;
-    background: #FFFFFF;
+    padding: 4rem 1rem;
+    background: #FAFAFA;
   }
 
   .section-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
   }
 
   .section-title {
-    font-size: clamp(28px, 5vw, 42px);
+    font-size: clamp(32px, 5vw, 48px);
     font-weight: 700;
-    color: #1F2937;
-    margin-bottom: 1rem;
-    font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+    color: #1A1A1A;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
   }
 
   .section-subtitle {
-    font-size: 18px;
-    color: #6B7280;
-    margin-bottom: 1rem;
+    font-size: 16px;
+    color: #7A7A7A;
+    margin: 0;
+    font-weight: 400;
   }
 
   .products-grid {
@@ -86,19 +88,18 @@
 
   .product-card {
     background: #FFFFFF;
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .product-card:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-6px);
   }
 
   .product-image-placeholder {
-    background: linear-gradient(135deg, #E5E7EB 0%, #F3F4F6 100%);
     aspect-ratio: 1 / 1;
     display: flex;
     flex-direction: column;
@@ -106,45 +107,77 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(135deg, #D3D3D3 0%, #E8E8E8 100%);
+  }
+
+  .product-image-1 {
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8559 100%);
+  }
+
+  .product-image-2 {
+    background: linear-gradient(135deg, #2E8B57 0%, #52B788 100%);
+  }
+
+  .product-image-3 {
+    background: linear-gradient(135deg, #1D3557 0%, #2D5A7B 100%);
+  }
+
+  .product-image-4 {
+    background: linear-gradient(135deg, #1A1A1A 0%, #2A2A2A 100%);
   }
 
   .product-image-text {
-    font-size: 14px;
-    color: #9CA3AF;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
     font-weight: 500;
     margin-top: 0.5rem;
+    letter-spacing: 0.5px;
   }
 
   .product-badge {
     position: absolute;
     top: 1rem;
     left: 1rem;
-    background: #F97316;
-    color: #FFFFFF;
-    padding: 6px 12px;
+    padding: 0.375rem 0.75rem;
     border-radius: 4px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .badge-bestseller {
+    background: #FF6B35;
+    color: #FFFFFF;
+  }
+
+  .badge-new {
+    background: #2E8B57;
+    color: #FFFFFF;
+  }
+
+  .badge-sale {
+    background: #EF4444;
+    color: #FFFFFF;
   }
 
   .product-info {
-    padding: 1rem;
+    padding: 1.25rem;
   }
 
   .product-title {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
-    color: #1F2937;
-    margin-bottom: 0.5rem;
+    color: #1A1A1A;
+    margin-bottom: 0.75rem;
     line-height: 1.4;
   }
 
   .product-price {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
-    color: #1E40AF;
-    margin-bottom: 1rem;
+    color: #1A1A1A;
+    margin-bottom: 0.75rem;
   }
 
   .product-rating {
@@ -152,40 +185,63 @@
     align-items: center;
     gap: 2px;
     margin-bottom: 1rem;
-    font-size: 14px;
-    color: #6B7280;
+    font-size: 12px;
   }
 
   .star-icon {
-    color: #FFA500;
+    color: #FF6B35;
+    font-size: 14px;
+  }
+
+  .product-detail {
+    font-size: 12px;
+    color: #7A7A7A;
+    margin: 0.75rem 0 0 0;
+    font-weight: 400;
   }
 
   .product-btn {
     width: 100%;
-    background: #1E40AF;
+    background: #1A1A1A;
     color: #FFFFFF;
-    padding: 1rem;
+    padding: 0.875rem;
     font-weight: 600;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    letter-spacing: 0.3px;
   }
 
   .product-btn:hover {
-    background: #1E3A8A;
+    background: #FF6B35;
+    transform: translateY(-2px);
   }
 
   @media (max-width: 768px) {
+    .featured-products {
+      padding: 3rem 1rem;
+    }
+
     .products-grid {
       grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
+      gap: 1.5rem;
+    }
+
+    .section-header {
+      margin-bottom: 2.5rem;
     }
   }
 
   @media (max-width: 480px) {
     .products-grid {
       grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .product-info {
+      padding: 1rem;
     }
   }
 </style>
