@@ -1,10 +1,10 @@
 /* ==========================================
-   Simplinova Theme - Complete CSS System
-   No Images Required - Gradients & Patterns Only
+   Simplinova Theme - Enhanced Modern CSS
+   Premium Design System with Micro-interactions
    ========================================== */
 
 /* ==========================================
-   1. CSS VARIABLES & COLOR PALETTE
+   1. CSS VARIABLES & ENHANCED COLOR PALETTE
    ========================================== */
 
 :root {
@@ -12,9 +12,11 @@
   --color-primary: #1E40AF;
   --color-primary-dark: #1E3A8A;
   --color-primary-light: #3B82F6;
+  --color-primary-lighter: #60A5FA;
   --color-accent: #F97316;
   --color-accent-light: #FB923C;
   --color-accent-dark: #EA580C;
+  --color-accent-darker: #DC2626;
   
   /* Neutrals */
   --color-white: #FFFFFF;
