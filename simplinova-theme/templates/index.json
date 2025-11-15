@@ -1,41 +1,26 @@
 {
   "sections": {
     "hero": {
-      "type": "simplinova-hero",
-      "settings": {}
-    },
-    "trust_badges": {
-      "type": "simplinova-trust-badges",
+      "type": "dropshipping-hero",
       "settings": {}
     },
     "featured_products": {
-      "type": "simplinova-featured-products",
+      "type": "dropshipping-products",
       "settings": {}
     },
-    "brand_story": {
-      "type": "simplinova-brand-story",
+    "trust_badges": {
+      "type": "dropshipping-trust",
       "settings": {}
     },
-    "collections": {
-      "type": "simplinova-collections",
-      "settings": {}
-    },
-    "testimonials": {
-      "type": "simplinova-testimonials",
-      "settings": {}
-    },
-    "newsletter": {
-      "type": "simplinova-newsletter",
+    "cta": {
+      "type": "dropshipping-cta",
       "settings": {}
     }
   },
   "order": [
     "hero",
-    "trust_badges",
     "featured_products",
-    "brand_story",
-    "collections",
-    "testimonials",
-    "newsletter"
+    "trust_badges",
+    "cta"
   ]
 }
