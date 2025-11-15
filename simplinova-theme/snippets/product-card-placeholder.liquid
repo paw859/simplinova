@@ -1,0 +1,38 @@
+{% comment %}
+  Reusable product card component with image placeholder
+  No custom product images required
+{% endcomment %}
+
+<div class="product-card">
+  <div class="product-image-placeholder">
+    <svg class="icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+      <circle cx="12" cy="13" r="4"></circle>
+    </svg>
+    <span class="product-image-text">Product Image</span>
+    {% if badge %}
+      <span class="product-badge">{{ badge }}</span>
+    {% endif %}
+  </div>
+  
+  <div class="product-info">
+    <h3 class="product-title">{{ product_name }}</h3>
+    
+    {% if rating %}
+      <div class="product-rating">
+        {% for i in (1..5) %}
+          {% if i <= rating %}
+            <span class="star-icon">★</span>
+          {% else %}
+            <span class="star-icon" style="opacity: 0.3;">★</span>
+          {% endif %}
+        {% endfor %}
+        <span style="color: #9CA3AF;">({{ rating_count }})</span>
+      </div>
+    {% endif %}
+    
+    <div class="product-price">{{ price }}</div>
+    
+    <button class="product-btn">Add to Cart</button>
+  </div>
+</div>

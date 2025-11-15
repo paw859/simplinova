@@ -1,0 +1,154 @@
+{% comment %}
+  Testimonials Section with avatar circles and ratings
+  No customer photos required - uses colored avatars
+{% endcomment %}
+
+<section class="testimonials">
+  <div class="testimonials-wrapper">
+    <div class="section-header">
+      <h2 class="section-title">Loved by Our Customers</h2>
+      <p class="section-subtitle">Join thousands of happy shoppers</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-avatar">SM</div>
+        <div class="testimonial-stars">
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+        </div>
+        <p class="testimonial-text">
+          "Amazing quality and fast shipping! The products exceeded my expectations. Will definitely order again!"
+        </p>
+        <p class="testimonial-author">
+          Sarah M.
+          <span class="testimonial-verified">✓ Verified Buyer</span>
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-avatar">MT</div>
+        <div class="testimonial-stars">
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+        </div>
+        <p class="testimonial-text">
+          "Best online shopping experience! Fast delivery and excellent customer service. Highly recommended!"
+        </p>
+        <p class="testimonial-author">
+          Michael T.
+          <span class="testimonial-verified">✓ Verified Buyer</span>
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-avatar">JL</div>
+        <div class="testimonial-stars">
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+        </div>
+        <p class="testimonial-text">
+          "Love the quality! Everything arrived perfect and exactly as described. Great prices and amazing products."
+        </p>
+        <p class="testimonial-author">
+          Jennifer L.
+          <span class="testimonial-verified">✓ Verified Buyer</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    padding: 3rem 1rem;
+    background: #FFFFFF;
+  }
+
+  .testimonials-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .testimonial-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+  }
+
+  .testimonial-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-color: #F97316;
+  }
+
+  .testimonial-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1E40AF, #F97316);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-stars {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 1rem;
+    font-size: 16px;
+  }
+
+  .testimonial-star {
+    color: #FFA500;
+  }
+
+  .testimonial-text {
+    font-size: 16px;
+    color: #6B7280;
+    font-style: italic;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+  }
+
+  .testimonial-author {
+    font-weight: 600;
+    color: #1F2937;
+    font-size: 16px;
+  }
+
+  .testimonial-verified {
+    display: inline-block;
+    margin-left: 0.5rem;
+    color: #F97316;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  @media (max-width: 768px) {
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

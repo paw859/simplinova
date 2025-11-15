@@ -1,0 +1,191 @@
+{% comment %}
+  Featured Products Section with image placeholders
+  No custom images required - uses gradient placeholders
+{% endcomment %}
+
+<section class="featured-products">
+  <div class="section-header">
+    <h2 class="section-title">Our Bestsellers</h2>
+    <p class="section-subtitle">Handpicked favorites loved by thousands</p>
+  </div>
+
+  <div class="products-grid">
+    {% for i in (1..4) %}
+      <div class="product-card">
+        <div class="product-image-placeholder">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #9CA3AF;">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="13" r="4"></circle>
+          </svg>
+          <span class="product-image-text">Product Image</span>
+          {% if i == 1 %}
+            <span class="product-badge">Bestseller</span>
+          {% elsif i == 2 %}
+            <span class="product-badge">New</span>
+          {% elsif i == 3 %}
+            <span class="product-badge">Sale</span>
+          {% endif %}
+        </div>
+        
+        <div class="product-info">
+          <h3 class="product-title">Premium Product {% increment product_count %}</h3>
+          
+          <div class="product-rating">
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <span class="star-icon">★</span>
+            <span class="star-icon" style="opacity: 0.3;">★</span>
+            <span style="color: #9CA3AF; font-size: 14px;">(127)</span>
+          </div>
+          
+          <div class="product-price">${{ i | times: 29 | plus: 99 }}.99</div>
+          
+          <button class="product-btn">Add to Cart</button>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+  .featured-products {
+    padding: 3rem 1rem;
+    background: #FFFFFF;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-title {
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  }
+
+  .section-subtitle {
+    font-size: 18px;
+    color: #6B7280;
+    margin-bottom: 1rem;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .product-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+
+  .product-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+  }
+
+  .product-image-placeholder {
+    background: linear-gradient(135deg, #E5E7EB 0%, #F3F4F6 100%);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-image-text {
+    font-size: 14px;
+    color: #9CA3AF;
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }
+
+  .product-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #F97316;
+    color: #FFFFFF;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .product-info {
+    padding: 1rem;
+  }
+
+  .product-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+
+  .product-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1E40AF;
+    margin-bottom: 1rem;
+  }
+
+  .product-rating {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    color: #6B7280;
+  }
+
+  .star-icon {
+    color: #FFA500;
+  }
+
+  .product-btn {
+    width: 100%;
+    background: #1E40AF;
+    color: #FFFFFF;
+    padding: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .product-btn:hover {
+    background: #1E3A8A;
+  }
+
+  @media (max-width: 768px) {
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .products-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

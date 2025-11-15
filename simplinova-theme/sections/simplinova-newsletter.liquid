@@ -1,0 +1,117 @@
+{% comment %}
+  Newsletter Section with gradient and pattern background
+  Email signup with decorative elements
+{% endcomment %}
+
+<section class="newsletter">
+  <div class="newsletter-wrapper">
+    <div class="newsletter-icon">📧</div>
+    <h2>Join 10,000+ Happy Customers</h2>
+    <p>Get exclusive deals and 10% off your first order!</p>
+    
+    <form class="newsletter-form" onsubmit="return false;">
+      <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+      <button type="submit" class="newsletter-btn">Subscribe</button>
+    </form>
+    
+    <p class="newsletter-privacy">We respect your privacy. Unsubscribe anytime.</p>
+  </div>
+</section>
+
+<style>
+  .newsletter {
+    background: linear-gradient(135deg, #1E40AF 0%, #0891B2 100%);
+    padding: 3rem 1rem;
+    position: relative;
+    overflow: hidden;
+    color: #FFFFFF;
+  }
+
+  .newsletter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.05) 10px,
+      rgba(255, 255, 255, 0.05) 20px
+    );
+  }
+
+  .newsletter-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .newsletter-icon {
+    font-size: 48px;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter h2 {
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+  }
+
+  .newsletter p {
+    font-size: 16px;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+  }
+
+  .newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter-input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  .newsletter-btn {
+    background: #F97316;
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .newsletter-btn:hover {
+    background: #EA580C;
+    transform: translateY(-2px);
+  }
+
+  .newsletter-privacy {
+    font-size: 12px;
+    opacity: 0.85;
+  }
+
+  @media (max-width: 768px) {
+    .newsletter-form {
+      flex-direction: column;
+    }
+
+    .newsletter-input,
+    .newsletter-btn {
+      width: 100%;
+    }
+  }
+</style>
