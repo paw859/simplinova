@@ -1,0 +1,80 @@
+/* Premium Black Theme Overrides */
+:root {
+  --color-background: 10,10,12; /* rgb(10,10,12) */
+  --color-foreground: 243,244,246; /* #f3f4f6 */
+  --color-primary: 212,175,55; /* gold */
+  --color-primary-dark: 184,148,31;
+  --color-accent: 255,107,53;
+  --color-border: 255,255,255; /* border uses rgba with opacity */
+}
+
+body {
+  background: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+}
+
+/* Make cards and panels slightly lighter than page background */
+.card,
+.product-card,
+.component-card,
+.section {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.06);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+  color: rgb(var(--color-foreground));
+}
+
+/* Buttons - primary gold on black */
+.button--primary,
+button.primary,
+.btn-primary {
+  background: linear-gradient(135deg, rgb(var(--color-primary)) 0%, rgb(var(--color-primary-dark)) 100%);
+  color: rgb(10,10,12);
+  border: none;
+  box-shadow: 0 6px 18px rgba(212,175,55,0.15);
+}
+
+.button--primary:hover,
+button.primary:hover,
+.btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+/* Links */
+a, a:visited {
+  color: rgb(var(--color-primary));
+}
+
+/* Badges */
+.badge--primary {
+  background: rgb(var(--color-primary));
+  color: rgb(10,10,12);
+}
+
+/* Inputs */
+input, textarea, select {
+  background: rgba(255,255,255,0.03);
+  color: rgb(var(--color-foreground));
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Footer lighten */
+.site-footer {
+  background: rgba(255,255,255,0.02);
+  color: rgb(var(--color-foreground));
+}
+
+/* Make sure decorative light elements don't overwhelm */
+.decoration-top-right, .decoration-bottom-left {
+  opacity: 0.06;
+}
+
+@media (prefers-color-scheme: light) {
+  /* keep always dark regardless of system */
+  :root { }
+}
