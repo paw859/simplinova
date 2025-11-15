@@ -1,0 +1,39 @@
+{%- schema -%}
+{
+  "name": "Newsletter Modal",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Join 10,000+ Smart Shoppers" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Get exclusive deals + 10% off your first order" },
+    { "type": "text", "id": "incentive_text", "label": "Incentive Text", "default": "Use code WELCOME10 at checkout" },
+    { "type": "checkbox", "id": "show_on_load", "label": "Show on page load (delay)", "default": true },
+    { "type": "number", "id": "delay_seconds", "label": "Delay before showing (seconds)", "default": 6 }
+  ],
+  "presets": [{ "name": "Newsletter Modal" }]
+}
+{%- endschema -%}
+
+<div id="newsletter-modal" class="newsletter-modal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="newsletter-modal__content" role="document">
+    <button class="newsletter-modal__close" aria-label="Close newsletter popup">×</button>
+    <div class="newsletter-modal__icon">💌</div>
+    <h2 class="newsletter-modal__heading">{{ section.settings.heading }}</h2>
+    <p class="newsletter-modal__subheading">{{ section.settings.subheading }}</p>
+    <div class="newsletter-modal__incentive">{{ section.settings.incentive_text }}</div>
+
+    <form id="newsletter-form" class="newsletter-modal__form" data-section-id="{{ section.id }}" method="post" action="/contact#contact_form">
+      <input type="hidden" name="form_type" value="customer">
+      <input class="newsletter-modal__input" type="email" name="contact[email]" id="newsletter-email" placeholder="your@email.com" required>
+      <button type="submit" class="newsletter-modal__subscribe">Subscribe & Get 10% Off</button>
+    </form>
+
+    <p class="newsletter-modal__terms">We respect your inbox. <a href="/policies/privacy-policy">Privacy Policy</a></p>
+  </div>
+</div>
+
+<script>
+  // Accessibility: hide modal from screen readers until active
+  (function(){
+    var modal = document.getElementById('newsletter-modal');
+    if (modal) modal.setAttribute('aria-hidden', 'true');
+  })();
+</script>
